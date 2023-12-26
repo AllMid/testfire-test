@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 
 class GoogleSeacrhLocators:
     LOCATOR_GOOGLE_SEARCH_FIELD = (By.ID, "query")
-    LOCATOR_GOOGLE_SEARCH_BUTTON = (By.CLASS_NAME, "submit")
+    LOCATOR_GOOGLE_SEARCH_BUTTON = (By.XPATH, "//*[@id='frmSearch']/table/tbody/tr[1]/td[2]/input[2]")
     LOCATOR_GOOGLE_USERNAME_FIELD = (By.ID, "uid")
     LOCATOR_GOOGLE_PASSWORD_FIELD = (By.ID, "passw")
     LOCATOR_GOOGLE_LOGIN_BUTTON = (By.NAME, "btnSubmit")
@@ -38,4 +38,3 @@ class SearchHelper(BasePage):
     def get_main_message(self):
         return self.find_element(GoogleSeacrhLocators.LOCATOR_GOOGLE_MAIN_MESSAGE)
 
-    

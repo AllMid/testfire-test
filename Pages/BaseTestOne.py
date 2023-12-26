@@ -15,3 +15,8 @@ class BasePage:
 
     def go_to_site(self):
         return self.driver.get(self.base_url)
+    
+    def get_alert_text(self):
+        WebDriverWait(self.driver, 3).until(EC.alert_is_present(), 'Timed out waiting for confirmation popup to appear')
+        alert_box = self.driver.switch_to.alert
+        return alert_box.text
