@@ -22,9 +22,18 @@ class SearchHelper(BasePage):
         search_field.click()
         search_field.send_keys(word)
         return search_field
+    
+    def enter_word_search(self, word):
+        search_field = self.find_element(GoogleSeacrhLocators.LOCATOR_GOOGLE_SEARCH_FIELD)
+        search_field.click()
+        search_field.send_keys(word)
+        return search_field
 
     def click_on_the_login_button(self):
         return self.find_element(GoogleSeacrhLocators.LOCATOR_GOOGLE_LOGIN_BUTTON,time=2).click()
+
+    def click_on_the_search_button(self):
+        return self.find_element(GoogleSeacrhLocators.LOCATOR_GOOGLE_SEARCH_BUTTON).click()
 
     def get_main_message(self):
         return self.find_element(GoogleSeacrhLocators.LOCATOR_GOOGLE_MAIN_MESSAGE)

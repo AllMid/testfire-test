@@ -1,6 +1,5 @@
 import pytest
 from selenium import webdriver
-from selenium.webdriver import DesiredCapabilities
 
 @pytest.fixture(scope="function")
 def browser():
