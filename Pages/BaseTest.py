@@ -21,7 +21,8 @@ class BasePage:
     def go_to_site(self):
         return self.driver.get(self.base_url)
     
-    #search the alert box
+    #creates a string alert_txt, where it is indicated that alert_no (missing), 
+    #then a search is performed and, if alert is found, the string changes to allert_yes
     def get_alert_box(self):
         alert_txt = "alert_no"
         try:
